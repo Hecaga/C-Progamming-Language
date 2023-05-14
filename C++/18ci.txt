@@ -1,0 +1,74 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+ //seh 138 misal 5
+
+    int a[4][5] = { {12,21,35,45,75},
+                    {45,8,9,56,45},
+                    {7,55,69,75,2},
+                    {78,53,7,97,85} };
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+    cout << "~~             massiv          ~~"<<endl;
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+    //massivin capi
+    for (int k = 0; k < 4; k++) {
+        for (int l = 0; l < 5; l++) {
+            cout << a[k][l] << " ";
+        }cout << endl;
+    }
+
+   
+    //yuxarilar
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+    cout << "~~ yuxarida olan reqemler      ~~" << endl;
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+
+    for (int k = 1; k < 4; k++) {
+        for (int l = 0; l < 5; l++) {
+            if (a[k][l] > a[k - 1][l]) {
+                cout <<a[k][l] << " ededinin yuxarisinda: " << a[k - 1][l] << endl;
+           
+            }
+        }
+    }
+
+    //asagi
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+    cout << " ~~    asgida olan reqemler    ~~" << endl;
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+    for (int k = 0; k < 3; k++) {
+        for (int l = 0; l < 5; l++) {
+            if (a[k][l] > a[k + 1][l]) {
+                cout  << a[k][l] << " ededinin asaxisinda: " << a[k + 1][l] << endl;
+            }
+        }
+    }
+
+    //sol
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+    cout << "~~ solda olan reqemler         ~~" << endl;
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+    for (int k = 0; k < 4; k++) {
+        for (int l = 1; l < 5; l++) {
+            if (a[k][l] > a[k][l-1]) {
+                cout << a[k][l] << " ededinin solunda: " << a[k][l-1] << endl;
+            }
+        }
+    }
+
+    //sag
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+    cout << "~~ sagda olan reqemler         ~~" << endl;
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+    for (int k = 0; k < 4; k++) {
+        for (int l = 0; l < 4; l++) {
+            if (a[k][l] > a[k][l + 1]) {
+                cout << a[k][l] << " ededinin saginda: " << a[k][l + 1] << endl;
+            }
+        }
+    }
+
+
+	return 0;
+}

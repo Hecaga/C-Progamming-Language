@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "3e ve 6a ve 9a bolunen ededler: ";
+    for (int i = 10; i < 100; i++) {
+        if (i % 3 == 0 && i % 6 == 0) {
+            if (i % 9 == 0) {
+                cout << i << " ";
+            }
+            
+        }
+ }
+
+    return 0;
+}

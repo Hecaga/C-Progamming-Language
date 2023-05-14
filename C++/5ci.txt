@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+//yuxari ve asagi ucbucaq
+
+
+
+
+
+  int array[4][4] = {
+   { 11,2,13,4},
+   { 5,3,7,8 },
+   { 15,6,17,8},
+ { 5,36,7,18}
+ };
+
+ cout<<"Asagi ucbucaq:"<<endl;
+ for (int i = 0; i < 4; i++) {
+   for (int j = 0; j < 4; j++) {
+     if(i>j){
+       cout<<array[i][j]<<"   ";
+     }
+   }
+
+ }
+
+ cout<<endl<<"Yuxari ucbucaq:"<<endl;
+ for (int i = 0; i < 4; i++) {
+   for (int j = 0; j < 4; j++) {
+     if(j>i){
+       cout<<array[i][j]<<"   ";
+     }
+   
+ }
+
+
+    return 0;
+}

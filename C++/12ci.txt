@@ -1,0 +1,24 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main(){
+    //sekil 1 misal 2
+    
+    int a[15]={1,28,49,-2,6,4,7,74,5,97,5,79,79,68,0};
+    int b[15]={12,28,7,-2,6,8,7,4,5,3,5,7,3,68,0};
+    int x;
+    int m[x];
+int s=0;
+
+for(int i=0;i<15;i++){
+    if(a[i]==pow(b[i],2)){
+        s++;
+        m[s]=a[i];
+    }
+}
+   
+    for(int i=0;i<s;i++){
+        cout<<m[i]<<" ";
+    }
+    return 0;
+}

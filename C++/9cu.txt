@@ -1,0 +1,50 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main(){
+    //sekil 2 misal 2
+cout<<"massivin capi:\n";
+int a[4][5]={{4,56,8,2,37},{5,68,4,2,1},{7,5,2,45,6},{7,9,5,9,9}};
+for(int x=0;x<4;x++){
+    for(int y=0;y<5;y++){
+        cout<<a[x][y]<<" ";
+    }cout<<endl;
+}
+cout<<endl;
+
+int cem=0;
+int s=-1;
+int m[4];
+int ss=0;
+
+for(int x=0;x<4;x++){
+    for(int y=0;y<5;y++){
+        cem+=a[x][y];
+        
+    }s++;
+    m[s]=cem;
+    cem=0;
+}
+
+//sutun cemlerinin massive kocurulmesi
+cout<<"sutunlarin cemi: ";
+for(int i=0;i<4;i++){
+    cout<<m[i]<<" ";
+}cout<<endl;
+
+//max elementin tapilmasi
+int max=m[0];
+for(int i=0;i<4;i++){
+    if(max<m[i]){
+        max=m[i];
+        ss=i;
+        }
+}cout<<"max cem: "<<max<<endl;
+
+//siranin capi
+cout<<"sira: ";
+for(int i=0;i<5;i++){
+   cout<<a[ss][i]<<" ";
+}
+   return 0;
+}

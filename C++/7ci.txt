@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+//3 ededin muqayisesi
+	int a, b, c;
+	cout << "1ci eded  ";
+	cin >> a;
+	cout << "2ci eded  ";
+	cin >> b;
+	cout << "3cu eded  ";
+	cin >> c;
+
+	if (a > b && b>c) {
+		cout << "A>B>C";
+	}
+	else if (b > a && a>c) {
+		cout << "B>A>C";
+	}
+	else if (c > a && a>b) {
+		cout << "C>A>B";
+	}
+	else if (a > c && c > b) {
+		cout << "A>C>B";
+	}
+	else if (b > c && c > a) {
+		cout << "B>C>A";
+	}
+	else if (c > b && b > a) {
+		cout << "C>B>A";
+	}
+	else {
+		cout << "A=B=C";
+	}
+
+
+	return 0;
+}

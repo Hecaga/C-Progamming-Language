@@ -1,0 +1,161 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+   
+  int array[4][4] = {
+   { 11,2,13,4},
+   { 5,6,7,8 },
+   { 15,6,17,8 },
+ { 5,16,7,18 }
+ },min=array[0][0];
+
+// //  min elementi teyin edib butun elementleri hemin edede vurmaq
+
+ for (int i = 0; i < 4; i++) {
+   for (int j =0; j < 4; j++) {
+     if(array[i][j]<min){
+         min=array[i][j];
+     }
+   }
+
+// }
+
+ for (int i = 0; i < 4; i++) {
+   for (int j = 0; j < 4; j++) {
+       array[i][j]*=min;
+     cout << array[i][j] << " ";
+   }
+   cout<<endl;
+ }
+
+//min elemente qeder olan elementlerin cemini tapmaq
+   
+  int array[4][4] = {
+   { 11,2,13,7},
+   { 5,3,7,10 },
+   { 15,6,17,8 },
+ { 5,16,7,18 }
+ },min=array[0][0], z=0,k=0,sum=0;
+
+
+ for (int i = 0; i < 4; i++) {
+   for (int j = 0; j < 4; j++) {
+     if(array[i][j]<min){
+         min=array[i][j];
+         z=i;k=j;
+     }
+   }
+
+ }
+
+ for (int i = 0; i <=z; i++) {
+   for (int j = 0; j <4; j++) {
+       if(i==z && j==k){
+           break;
+       }
+       sum+=array[i][j];
+    
+
+   }
+
+ }
+
+ cout<<sum;
+
+
+//max elementden sonra olan elementlerin cemini tapmaq
+   
+  int array[4][4] = {
+   { 11,2,13,4},
+   { 5,3,7,8 },
+   { 15,6,17,8},
+ { 5,36,7,18}
+ },max=array[0][0], z=0,k=0,sum=0;
+
+
+ for (int i = 0; i < 4; i++) {
+   for (int j = 0; j < 4; j++) {
+     if(array[i][j]>max){
+         max=array[i][j];
+         z=i;k=j;
+     }
+   }
+
+ }
+
+ for (int i = z; i <4; i++) {
+   for (int j = k+1; j <4; j++) {
+       sum+=array[i][j];
+
+   }
+
+ }
+
+ cout<<sum;
+
+
+
+//verilmis k ededinden boyuk olan ededlerin cemi ve sayi
+
+  int array[4][4] = {
+   { 11,2,13,4},
+   { 5,3,7,8 },
+   { 15,6,17,8},
+ { 5,36,47,18}
+ },k=18,sum=0,count=0;
+
+
+ for (int i = 0; i < 4; i++) {
+   for (int j = 0; j < 4; j++) {
+     if(array[i][j]>k){
+         count++;
+         sum+=array[i][j];
+     }
+   }
+
+ }
+
+
+
+ cout<<"say: "<<count<<endl;
+ cout<<"cem: "<<sum;
+
+//yuxari ve asagi ucbucaq
+
+
+
+
+
+  int array[4][4] = {
+   { 11,2,13,4},
+   { 5,3,7,8 },
+   { 15,6,17,8},
+ { 5,36,7,18}
+ };
+
+ cout<<"Asagi ucbucaq:"<<endl;
+ for (int i = 0; i < 4; i++) {
+   for (int j = 0; j < 4; j++) {
+     if(i>j){
+       cout<<array[i][j]<<"   ";
+     }
+   }
+
+ }
+
+ cout<<endl<<"Yuxari ucbucaq:"<<endl;
+ for (int i = 0; i < 4; i++) {
+   for (int j = 0; j < 4; j++) {
+     if(j>i){
+       cout<<array[i][j]<<"   ";
+     }
+   
+ }
+
+
+    return 0;
+}

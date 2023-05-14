@@ -1,0 +1,50 @@
+#include <iostream>
+#include<cmath>
+using namespace std;
+int main() {
+
+
+    //seh 138 nomre 2
+
+
+    int maxse = 0, maxsu = 0, su = 0, se = 0;
+
+
+    int a[3][4] = { {5,9,10,7 },
+                    {10,20,8,30},
+                    {40,113,15,22} };
+
+
+
+
+    //setirlein cemi
+    for (int k = 0; k < 3; k++) {
+        for (int l = 0; l < 4; l++) {
+            se += a[k][l];
+            if (maxse < se) {
+                maxse = se;
+            }
+
+        }cout << k << "ci setrin cemi: " << se << endl;
+        se = 0;
+
+    }
+
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+    //sutunlarin cemi
+    for (int l = 0; l < 4; l++) {
+        for (int k = 0; k < 3; k++) {
+            su += a[k][l];
+            if (maxsu < su) {
+                maxsu = su;
+            }
+        }cout << l << "ci sutunun cemi: " << su << endl;
+        su = 0;
+    }
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+    cout << "setirlerin ceminin max qiymeti: " << maxse << endl;
+    cout << "sutunlarin ceminin max qiymeti: " << maxsu << endl;
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+   
+ return 0;
+}
